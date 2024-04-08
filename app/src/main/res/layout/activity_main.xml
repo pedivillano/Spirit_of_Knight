@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_activity"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativelayout">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="5"
+        android:rowCount="5"
+        android:background="@color/white"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+
+        <!-- 5x5的棋盘格子 -->
+<!--        <ImageView-->
+<!--            android:id="@+id/square_1_1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:src="@drawable/black_square"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:scaleType="fitXY"/>-->
+        <!--_1_1-->
+        <RelativeLayout
+            android:id="@+id/rn_1_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_1_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_1_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="visible"
+                android:layout_alignStart="@id/square_1_1"
+                android:layout_alignTop="@id/square_1_1"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_1_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_1_1"
+                android:layout_alignTop="@id/square_1_1"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_1_2-->
+        <RelativeLayout
+            android:id="@+id/rn_1_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_1_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_1_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_1_2"
+                android:layout_alignTop="@id/square_1_2"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_1_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_1_2"
+                android:layout_alignTop="@id/square_1_2"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_1_3-->
+        <RelativeLayout
+            android:id="@+id/rn_1_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_1_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_1_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_1_3"
+                android:layout_alignTop="@id/square_1_3"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_1_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_1_3"
+                android:layout_alignTop="@id/square_1_3"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_1_4-->
+        <RelativeLayout
+            android:id="@+id/rn_1_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_1_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_1_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_1_4"
+                android:layout_alignTop="@id/square_1_4"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_1_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_1_4"
+                android:layout_alignTop="@id/square_1_4"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_1_5-->
+        <RelativeLayout
+            android:id="@+id/rn_1_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_1_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_1_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_1_5"
+                android:layout_alignTop="@id/square_1_5"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_1_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_1_5"
+                android:layout_alignTop="@id/square_1_5"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_2_1-->
+        <RelativeLayout
+            android:id="@+id/rn_2_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_2_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_2_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_2_1"
+                android:layout_alignTop="@id/square_2_1"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_2_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_2_1"
+                android:layout_alignTop="@id/square_2_1"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_2_2-->
+        <RelativeLayout
+            android:id="@+id/rn_2_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_2_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_2_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_2_2"
+                android:layout_alignTop="@id/square_2_2"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_2_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_2_2"
+                android:layout_alignTop="@id/square_2_2"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_2_3-->
+        <RelativeLayout
+            android:id="@+id/rn_2_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_2_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_2_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_2_3"
+                android:layout_alignTop="@id/square_2_3"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_2_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_2_3"
+                android:layout_alignTop="@id/square_2_3"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_2_4-->
+        <RelativeLayout
+            android:id="@+id/rn_2_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_2_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_2_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_2_4"
+                android:layout_alignTop="@id/square_2_4"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_2_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_2_4"
+                android:layout_alignTop="@id/square_2_4"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_2_5-->
+        <RelativeLayout
+            android:id="@+id/rn_2_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_2_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_2_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_2_5"
+                android:layout_alignTop="@id/square_2_5"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_2_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_2_5"
+                android:layout_alignTop="@id/square_2_5"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_3_1-->
+        <RelativeLayout
+            android:id="@+id/rn_3_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_3_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_3_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_3_1"
+                android:layout_alignTop="@id/square_3_1"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_3_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_3_1"
+                android:layout_alignTop="@id/square_3_1"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_3_2-->
+        <RelativeLayout
+            android:id="@+id/rn_3_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_3_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_3_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_3_2"
+                android:layout_alignTop="@id/square_3_2"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_3_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_3_2"
+                android:layout_alignTop="@id/square_3_2"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_3_3-->
+        <RelativeLayout
+            android:id="@+id/rn_3_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_3_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_3_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_3_3"
+                android:layout_alignTop="@id/square_3_3"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_3_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_3_3"
+                android:layout_alignTop="@id/square_3_3"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_3_4-->
+        <RelativeLayout
+            android:id="@+id/rn_3_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_3_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_3_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_3_4"
+                android:layout_alignTop="@id/square_3_4"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_3_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_3_4"
+                android:layout_alignTop="@id/square_3_4"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_3_5-->
+        <RelativeLayout
+            android:id="@+id/rn_3_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_3_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_3_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_3_5"
+                android:layout_alignTop="@id/square_3_5"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_3_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_3_5"
+                android:layout_alignTop="@id/square_3_5"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_4_1-->
+        <RelativeLayout
+            android:id="@+id/rn_4_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_4_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_4_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_4_1"
+                android:layout_alignTop="@id/square_4_1"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_4_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_4_1"
+                android:layout_alignTop="@id/square_4_1"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_4_2-->
+        <RelativeLayout
+            android:id="@+id/rn_4_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_4_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_4_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_4_2"
+                android:layout_alignTop="@id/square_4_2"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_4_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_4_2"
+                android:layout_alignTop="@id/square_4_2"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_4_3-->
+        <RelativeLayout
+            android:id="@+id/rn_4_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_4_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_4_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_4_3"
+                android:layout_alignTop="@id/square_4_3"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_4_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_4_3"
+                android:layout_alignTop="@id/square_4_3"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_4_4-->
+        <RelativeLayout
+            android:id="@+id/rn_4_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_4_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_4_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_4_4"
+                android:layout_alignTop="@id/square_4_4"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_4_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_4_4"
+                android:layout_alignTop="@id/square_4_4"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_4_5-->
+        <RelativeLayout
+            android:id="@+id/rn_4_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_4_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_4_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_4_5"
+                android:layout_alignTop="@id/square_4_5"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_4_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_4_5"
+                android:layout_alignTop="@id/square_4_5"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_5_1-->
+        <RelativeLayout
+            android:id="@+id/rn_5_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_5_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_5_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_5_1"
+                android:layout_alignTop="@id/square_5_1"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_5_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_5_1"
+                android:layout_alignTop="@id/square_5_1"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_5_2-->
+        <RelativeLayout
+            android:id="@+id/rn_5_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_5_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_5_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_5_2"
+                android:layout_alignTop="@id/square_5_2"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_5_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_5_2"
+                android:layout_alignTop="@id/square_5_2"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_5_3-->
+        <RelativeLayout
+            android:id="@+id/rn_5_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_5_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_5_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_5_3"
+                android:layout_alignTop="@id/square_5_3"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_5_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_5_3"
+                android:layout_alignTop="@id/square_5_3"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_5_4-->
+        <RelativeLayout
+            android:id="@+id/rn_5_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_5_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_5_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_5_4"
+                android:layout_alignTop="@id/square_5_4"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_5_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_5_4"
+                android:layout_alignTop="@id/square_5_4"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!--_5_5-->
+        <RelativeLayout
+            android:id="@+id/rn_5_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <!-- 棋盘图片作为背景 -->
+            <ImageView
+                android:id="@+id/square_5_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_square"
+                android:scaleType="fitXY"/>
+
+            <!-- 白马的图像 -->
+            <ImageView
+                android:id="@+id/white_horse_5_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_5_5"
+                android:layout_alignTop="@id/square_5_5"
+                android:scaleType="fitXY"/>
+
+            <!-- 黑马的图像 -->
+            <ImageView
+                android:id="@+id/black_horse_5_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/black_knight"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/square_5_5"
+                android:layout_alignTop="@id/square_5_5"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <!-- 继续添加其余格子，每个格子类似上面的设置 -->
+
+    </GridLayout>
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/my_imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitXY"
+        android:layout_alignStart="@+id/relativelayout"
+        android:layout_alignTop="@+id/relativelayout">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="helloworld"
+
+        android:layout_below="@+id/relativelayout">
+
+    </TextView>
+</RelativeLayout>

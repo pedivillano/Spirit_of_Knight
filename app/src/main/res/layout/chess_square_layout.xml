@@ -1,0 +1,36 @@
+<!-- chess_square_layout.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 棋盘图片作为背景 -->
+    <ImageView
+        android:id="@+id/black_square"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/black_square"
+        android:scaleType="fitXY"/>
+
+    <!-- 白马的图像 -->
+    <ImageView
+        android:id="@+id/white_horse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/white_knight"
+        android:visibility="invisible"
+        android:layout_alignStart="@id/black_square"
+        android:layout_alignTop="@id/black_square"
+        android:scaleType="fitXY"/>
+
+    <!-- 黑马的图像 -->
+    <ImageView
+        android:id="@+id/black_horse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/black_knight"
+        android:visibility="invisible"
+        android:layout_alignStart="@id/black_square"
+        android:layout_alignTop="@id/black_square"
+        android:scaleType="fitXY"/>
+
+</RelativeLayout>
