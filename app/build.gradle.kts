@@ -1,3 +1,5 @@
+import com.android.ide.common.resources.fileNameToResourceName
+
 plugins {
     id("com.android.application")
 }
@@ -8,10 +10,10 @@ android {
 
     defaultConfig {
         applicationId = "com.example.spiritofknight"
-        minSdk = 30
+        minSdk = 28
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -29,6 +31,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
 }
 
 dependencies {
