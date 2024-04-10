@@ -8,6 +8,7 @@
     android:gravity="center"
     tools:context=".MainActivity">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -56,9 +57,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/white_knight"
-                android:visibility="visible"
+                android:visibility="invisible"
                 android:layout_alignStart="@id/square_1_1"
                 android:layout_alignTop="@id/square_1_1"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -70,8 +72,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_1_1"
                 android:layout_alignTop="@id/square_1_1"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_1_2-->
@@ -99,6 +101,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_1_2"
                 android:layout_alignTop="@id/square_1_2"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -110,8 +113,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_1_2"
                 android:layout_alignTop="@id/square_1_2"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_1_3-->
@@ -139,6 +142,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_1_3"
                 android:layout_alignTop="@id/square_1_3"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -150,8 +154,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_1_3"
                 android:layout_alignTop="@id/square_1_3"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_1_4-->
@@ -179,6 +183,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_1_4"
                 android:layout_alignTop="@id/square_1_4"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -190,8 +195,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_1_4"
                 android:layout_alignTop="@id/square_1_4"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_1_5-->
@@ -219,6 +224,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_1_5"
                 android:layout_alignTop="@id/square_1_5"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -230,8 +236,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_1_5"
                 android:layout_alignTop="@id/square_1_5"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_2_1-->
@@ -259,6 +265,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_2_1"
                 android:layout_alignTop="@id/square_2_1"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -270,8 +277,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_2_1"
                 android:layout_alignTop="@id/square_2_1"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_2_2-->
@@ -299,6 +306,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_2_2"
                 android:layout_alignTop="@id/square_2_2"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -310,8 +318,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_2_2"
                 android:layout_alignTop="@id/square_2_2"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_2_3-->
@@ -339,6 +347,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_2_3"
                 android:layout_alignTop="@id/square_2_3"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -350,8 +359,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_2_3"
                 android:layout_alignTop="@id/square_2_3"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_2_4-->
@@ -379,6 +388,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_2_4"
                 android:layout_alignTop="@id/square_2_4"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -390,8 +400,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_2_4"
                 android:layout_alignTop="@id/square_2_4"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_2_5-->
@@ -419,6 +429,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_2_5"
                 android:layout_alignTop="@id/square_2_5"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -430,8 +441,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_2_5"
                 android:layout_alignTop="@id/square_2_5"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_3_1-->
@@ -459,6 +470,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_3_1"
                 android:layout_alignTop="@id/square_3_1"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -470,8 +482,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_3_1"
                 android:layout_alignTop="@id/square_3_1"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_3_2-->
@@ -499,6 +511,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_3_2"
                 android:layout_alignTop="@id/square_3_2"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -510,8 +523,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_3_2"
                 android:layout_alignTop="@id/square_3_2"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_3_3-->
@@ -539,6 +552,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_3_3"
                 android:layout_alignTop="@id/square_3_3"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -550,8 +564,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_3_3"
                 android:layout_alignTop="@id/square_3_3"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_3_4-->
@@ -579,6 +593,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_3_4"
                 android:layout_alignTop="@id/square_3_4"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -590,8 +605,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_3_4"
                 android:layout_alignTop="@id/square_3_4"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_3_5-->
@@ -619,6 +634,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_3_5"
                 android:layout_alignTop="@id/square_3_5"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -630,8 +646,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_3_5"
                 android:layout_alignTop="@id/square_3_5"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_4_1-->
@@ -659,6 +675,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_4_1"
                 android:layout_alignTop="@id/square_4_1"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -670,8 +687,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_4_1"
                 android:layout_alignTop="@id/square_4_1"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_4_2-->
@@ -699,6 +716,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_4_2"
                 android:layout_alignTop="@id/square_4_2"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -710,8 +728,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_4_2"
                 android:layout_alignTop="@id/square_4_2"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_4_3-->
@@ -739,6 +757,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_4_3"
                 android:layout_alignTop="@id/square_4_3"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -750,8 +769,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_4_3"
                 android:layout_alignTop="@id/square_4_3"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_4_4-->
@@ -779,6 +798,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_4_4"
                 android:layout_alignTop="@id/square_4_4"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -790,8 +810,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_4_4"
                 android:layout_alignTop="@id/square_4_4"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_4_5-->
@@ -819,6 +839,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_4_5"
                 android:layout_alignTop="@id/square_4_5"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -830,8 +851,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_4_5"
                 android:layout_alignTop="@id/square_4_5"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_5_1-->
@@ -859,6 +880,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_5_1"
                 android:layout_alignTop="@id/square_5_1"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -870,8 +892,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_5_1"
                 android:layout_alignTop="@id/square_5_1"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_5_2-->
@@ -899,6 +921,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_5_2"
                 android:layout_alignTop="@id/square_5_2"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -910,8 +933,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_5_2"
                 android:layout_alignTop="@id/square_5_2"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_5_3-->
@@ -939,6 +962,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_5_3"
                 android:layout_alignTop="@id/square_5_3"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -950,8 +974,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_5_3"
                 android:layout_alignTop="@id/square_5_3"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_5_4-->
@@ -979,6 +1003,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_5_4"
                 android:layout_alignTop="@id/square_5_4"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -990,8 +1015,8 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_5_4"
                 android:layout_alignTop="@id/square_5_4"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
 
         <!--_5_5-->
@@ -1019,6 +1044,7 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_5_5"
                 android:layout_alignTop="@id/square_5_5"
+                android:tag="white"
                 android:scaleType="fitXY"/>
 
             <!-- 黑马的图像 -->
@@ -1030,9 +1056,10 @@
                 android:visibility="invisible"
                 android:layout_alignStart="@id/square_5_5"
                 android:layout_alignTop="@id/square_5_5"
+                android:tag="black"
                 android:scaleType="fitXY"/>
-
         </RelativeLayout>
+
 
         <!-- 继续添加其余格子，每个格子类似上面的设置 -->
 
@@ -1052,11 +1079,56 @@
     </ImageView>
 
     <TextView
+        android:id="@+id/tv_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="目标图"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/relativelayout"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/target"
+        android:layout_below="@+id/tv_target"/>
+
+    <TextView
+        android:id="@+id/tv_illa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="行动示意图"
+        android:layout_marginTop="20dp"
+        android:layout_alignRight="@+id/relativelayout"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/relativelayout"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/illa"
+
+        android:layout_alignRight="@+id/relativelayout"
+        android:layout_below="@+id/tv_illa"/>
+
+
+    <TextView
+        android:id="@+id/tv_helloworld"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="helloworld"
-
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/relativelayout">
 
     </TextView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="一键换新"
+        android:layout_below="@+id/tv_helloworld">
+    </Button>
+
 </RelativeLayout>
