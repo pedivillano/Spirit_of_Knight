@@ -318,74 +318,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         myDragImageView = findViewById(R.id.my_imageview);
-//        horse.setOnTouchListener(new View.OnTouchListener() {
-//
-//            private boolean isMoving = false;
-//
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                switch (event.getAction()) {
-//                    case MotionEvent.ACTION_DOWN:
-//
-//                        previousX = event.getRawX();
-//                        previousY = event.getRawY();
-//
-//                        if(myDragImageView.getVisibility()!=View.VISIBLE){
-//                            myDragImageView.setVisibility(View.VISIBLE);
-//                        }
-//                        coordination_start = getCoordinate(previousX,previousY);
-//                        myDragImageView.setX(coordination_start[0]);
-//                        myDragImageView.setY(coordination_start[1]);
-//                        coordination_start_in_chess =getCoordinate_in_chess(previousX,previousY);
-//                        // 获取第一个 ImageView 的图像资源
-//                        Drawable drawable = horse.getDrawable();
-//                        // 将获取的图像资源设置给第二个 ImageView
-//                        myDragImageView.setImageDrawable(drawable);
-//                        // 将获取的图像的宽高参数设置给第二个ImageView
-//                        int newWidth = horse.getWidth();
-//                        int newHeight = horse.getHeight();
-//                        ViewGroup.LayoutParams layoutParams = myDragImageView.getLayoutParams();
-//                        layoutParams.width = newWidth;
-//                        layoutParams.height = newHeight;
-//                        myDragImageView.setLayoutParams(layoutParams);
-//
-//                        horse.setVisibility(View.GONE);
-//                        if (event.getAction() == MotionEvent.ACTION_DOWN) {
-//                            // 在 move 动作中，将事件传递给另一个 View
-//                            myDragImageView.dispatchTouchEvent(event);
-//                        }
-//
-//                        isMoving = true;
-//                        break;
-//                    case MotionEvent.ACTION_MOVE:
-//                        if (event.getAction() == MotionEvent.ACTION_MOVE) {
-//                            // 在 move 动作中，将事件传递给另一个 View
-//                            myDragImageView.dispatchTouchEvent(event);
-//                        }
-//                        Log.d("移动", "onTouch原ImageView: ");
-//                        if (isMoving) {
-//                            float dx = event.getRawX() - previousX;
-//                            float dy = event.getRawY() - previousY;
-//
-//                            // 移动 horse
-//                            moveHorse(horse, dx, dy);
-//
-//                            previousX = event.getRawX();
-//                            previousY = event.getRawY();
-//                        }
-//                        break;
-//                    case MotionEvent.ACTION_UP:
-//                        if (event.getAction() == MotionEvent.ACTION_UP) {
-//                            // 在 move 动作中，将事件传递给另一个 View
-//                            Log.d("原马松开", "onTouch: 传递");
-//                            myDragImageView.dispatchTouchEvent(event);
-//                        }
-//                        isMoving = false;
-//                        break;
-//                }
-//                return true;
-//            }
-//        });
 
         myDragImageView.setOnTouchListener(new View.OnTouchListener() {//拖动之物
             int i=0;
@@ -717,7 +649,7 @@ public class MainActivity extends AppCompatActivity {
         horse_RN_collection.add(findViewById(R.id.rn_5_4));
         horse_RN_collection.add(findViewById(R.id.rn_5_5));
         textView = findViewById(R.id.tv_helloworld);
-        count_move = 0;
+//        count_move = 0;
         textView.setText("移动了"+count_move+"次数");
     }
 
