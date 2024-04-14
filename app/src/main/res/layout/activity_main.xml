@@ -1097,6 +1097,7 @@
         android:layout_below="@+id/relativelayout"/>
 
     <ImageView
+        android:id="@+id/iv_target"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/target"
@@ -1113,10 +1114,11 @@
         android:layout_below="@+id/relativelayout"/>
 
     <ImageView
+        android:id="@+id/iv_illa"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/illa"
-
+        android:scaleType="fitXY"
         android:layout_alignRight="@+id/relativelayout"
         android:layout_below="@+id/tv_illa"/>
 
@@ -1155,5 +1157,6 @@
         android:visibility="invisible"
         android:text="开始"
         android:layout_below="@+id/hint_button"/>
+
 
 </RelativeLayout>

@@ -10,6 +10,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.graphics.drawable.Drawable;
+import android.inputmethodservice.Keyboard;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -177,6 +178,8 @@ public class MainActivity extends AppCompatActivity {
 
     List<Integer> arrayX = null;
     List<Integer> arrayY = null;
+
+    private static RelativeLayout blue_RelativeLayout;
     //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -508,13 +511,32 @@ public class MainActivity extends AppCompatActivity {
                                 int y = arrayY.get(i);
                                 sb.append("(").append(x).append(", ").append(y).append(") ");
                             }
-                            hint_title.setText(sb.toString());
+                            //蓝色标记
+                            //清除上一个蓝色标记
+                            blue_RelativeLayout.getChildAt(0).setAlpha(1f);
+                            blue_RelativeLayout.setBackgroundColor(Color.TRANSPARENT);
+                            //添加下一个蓝色标记
+                            if(arrayX.size()!=0&&arrayY.size()!=0){
+                                blue_RelativeLayout = horse_RN_collection.get(arrayY.get(0)* ROW+arrayX.get(0));
+                                blue_RelativeLayout.getChildAt(0).setAlpha(0.5f);
+                                blue_RelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.blue));
+                                hint_title.setText(sb.toString());
+                            }else{
+                                hint_title.setText("提示结束，请继续");
+                            }
+
+
                         }else if(isHintMove==true&&(arrayX!=null&&arrayX.size()!=0&&arrayY!=null&&arrayY.size()!=0)&&(coordination_start_in_chess[0]!=arrayX.get(0)||coordination_start_in_chess[1]!=arrayY.get(0))){
                             StringBuilder sb = new StringBuilder("未按照提示移动：提示结束");
                             System.out.println("final_Coordination[0] == "+final_Coordination[0]);
                             System.out.println("final_Coordination[1] == "+final_Coordination[1]);
                             isHintMove =  false;
                             hint_title.setText(sb.toString());
+                            //蓝色标记
+                            //放弃提示，清除标记
+                            blue_RelativeLayout = horse_RN_collection.get(arrayY.get(0)* ROW+arrayX.get(0));
+                            blue_RelativeLayout.getChildAt(0).setAlpha(1f);
+                            blue_RelativeLayout.setBackgroundColor(Color.TRANSPARENT);
                         }
                         myDragImageView.setVisibility(View.GONE);
                         myDragImageView.setX(coor[0]);
@@ -812,25 +834,32 @@ public class MainActivity extends AppCompatActivity {
                                     //获取第一个ImageView对象 开始
                                     coordination_start_in_chess =getCoordinate_in_chess(previousX,previousY);
                                     Pair temppair = Pair.create(coordination_start_in_chess[0],coordination_start_in_chess[1]);
+                                    System.out.print("swap：点击的坐标是("+temppair.first+","+temppair.second+")");
+
                                     if(containsPair(swap_coor, temppair)){
+                                        System.out.print("swap：路径1 重复移除相同的 ");
                                         removePair(swap_coor,temppair);
-                                        horse_RN_collection.get(coordination_start_in_chess[1]*5+(coordination_start_in_chess[0]+1)-1).getChildAt(0).setAlpha(1f);
-                                        horse_RN_collection.get(coordination_start_in_chess[1]*5+(coordination_start_in_chess[0]+1)-1).setBackgroundColor(Color.TRANSPARENT);
+                                        horse_RN_collection.get(coordination_start_in_chess[1]*5+(coordination_start_in_chess[0])).getChildAt(0).setAlpha(1f);
+                                        horse_RN_collection.get(coordination_start_in_chess[1]*5+(coordination_start_in_chess[0])).setBackgroundColor(Color.TRANSPARENT);
                                     }
-                                    else if(swap_coor.size()<=1&&!containsPair(swap_coor, Pair.create(coordination_start_in_chess[0],coordination_start_in_chess[1]))){
-                                        swap_coor.add(Pair.create(coordination_start_in_chess[0],coordination_start_in_chess[1]));
-                                        mCurrentRelativeLayout = horse_RN_collection.get(coordination_start_in_chess[1]*5+(coordination_start_in_chess[0]+1)-1);
+                                    else if(swap_coor.size()<=1&&!containsPair(swap_coor, temppair)){
+                                        System.out.print("swap：路径2 添加一个不在的 ");
+                                        swap_coor.add(temppair);
+                                        mCurrentRelativeLayout = horse_RN_collection.get(coordination_start_in_chess[1]*5+(coordination_start_in_chess[0]));
                                         mCurrentRelativeLayout.getChildAt(0).setAlpha(0f);
                                         mCurrentRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.pink));
                                     }else if(swap_coor.size()>=2){
-                                        swap_coor.remove(0);
+                                        System.out.print("swap：路径3 超了移除最后一个 ");
+                                        swap_coor.remove(1);
                                         mCurrentRelativeLayout.getChildAt(0).setAlpha(1f);
                                         mCurrentRelativeLayout.setBackgroundColor(Color.TRANSPARENT);
-                                        swap_coor.add(Pair.create(coordination_start_in_chess[0],coordination_start_in_chess[1]));
-                                        mCurrentRelativeLayout = horse_RN_collection.get(coordination_start_in_chess[1]*5+(coordination_start_in_chess[0]+1)-1);
+                                        swap_coor.add(temppair);
+                                        mCurrentRelativeLayout = horse_RN_collection.get(coordination_start_in_chess[1]*5+(coordination_start_in_chess[0]));
                                         mCurrentRelativeLayout.getChildAt(0).setAlpha(0f);
                                         mCurrentRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.pink));
                                     }
+                                    System.out.print("swap：大小是"+swap_coor.size()+" ");
+                                    printPairList(swap_coor);
 
                                     // 获取子视图数量
                                     int childCount = mCurrentRelativeLayout.getChildCount();
@@ -882,7 +911,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
-                // 打印棋盘（目标状态）
+                // 打印棋盘（当前状态）
+                System.out.println("起始状态");
                 printBoard(board);
                 for (int y = 0; y < 5; y++) {
                     for (int x = 0; x < 5; x++) {
@@ -892,6 +922,8 @@ public class MainActivity extends AppCompatActivity {
                 Pair<Integer, Integer> pair1 = swap_coor.get(0);
                 Pair<Integer, Integer> pair2 = swap_coor.get(1);
                 swapCells(goal, pair1.first, pair1.second, pair2.first, pair2.second);
+                System.out.println("终点状态");
+                // 打印棋盘（目标状态）
                 printBoard(goal);
 
                 // 创建线程对象，并传入 Lambda 表达式作为任务
@@ -941,6 +973,14 @@ public class MainActivity extends AppCompatActivity {
                                         mGridLayout.setOnTouchListener(grid_touchListener);
                                         sPopupWindowCreator.closeWindow();
                                         hint_title.setText(sb.toString());
+                                        //蓝色标记1
+                                        Log.d(TAG, "run: 尼玛的 外部");
+                                        if(!arrayX.isEmpty() && !arrayX.isEmpty()){
+                                            Log.d(TAG, "run: 尼玛的 内部");
+                                            blue_RelativeLayout = horse_RN_collection.get(arrayY.get(0)* ROW+arrayX.get(0));
+                                            blue_RelativeLayout.getChildAt(0).setAlpha(0.5f);
+                                            blue_RelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.blue));
+                                        }
                                     });
                                     break;
                                 }
@@ -994,9 +1034,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void swapCells(char[][] cells, int x1, int y1, int x2, int y2) {
+        System.out.println("swap: cell1 (" + x1 + ", " + y1 + ") cell2 (" + x2 + ", " + y2 + ")");
         char temp = cells[x1][y1];
         cells[x1][y1] = cells[x2][y2];
-        cells[x2][x2] = temp;
+        cells[x2][y2] = temp;
     }
 
     // 估价函数
@@ -1032,7 +1073,7 @@ public class MainActivity extends AppCompatActivity {
             swap(x, y, tX, tY);
             stackX.push(tX);
             stackY.push(tY);
-            System.out.println("Step: " + (step + 1) + ", Evaluate: " + evaluate() + ", MaxStep: " + maxStep);
+//            System.out.println("Step: " + (step + 1) + ", Evaluate: " + evaluate() + ", MaxStep: " + maxStep);
             if (step + 1 + evaluate() <= maxStep) {
 //                System.out.println("深入");
                 idaDfs(tX, tY, maxStep, step + 1);
@@ -1107,5 +1148,15 @@ public class MainActivity extends AppCompatActivity {
     private void initview2(){
         hint_title = findViewById(R.id.title);
     }
+
+    public static void printPairList(List<Pair<Integer, Integer>> pairList) {
+        System.out.print("swap: 打印所有值 ");
+        for (Pair<Integer, Integer> pair : pairList) {
+            System.out.print("(" + pair.first + ", " + pair.second + ")");
+        }
+        System.out.println("");
+    }
+
+
 
 }
