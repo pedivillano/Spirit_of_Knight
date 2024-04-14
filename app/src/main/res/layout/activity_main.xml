@@ -5,13 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main_activity"
-    android:gravity="center"
+    android:gravity="center_vertical"
     tools:context=".MainActivity">
 
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HELLO_WORLD" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:layout_below="@+id/title"
         android:id="@+id/relativelayout">
 
     <GridLayout
@@ -1130,5 +1139,21 @@
         android:text="一键换新"
         android:layout_below="@+id/tv_helloworld">
     </Button>
+
+    <Button
+        android:id="@+id/hint_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="两个位置交换提示"
+        android:layout_below="@+id/button"/>
+    <Button
+        android:id="@+id/makesure_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:text="开始"
+        android:layout_below="@+id/hint_button"/>
 
 </RelativeLayout>
